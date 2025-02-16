@@ -308,3 +308,25 @@ Learn more about thread identities [here](https://roblox.fandom.com/wiki/Securit
 setthreadidentity(3)
 print(getthreadidentity()) --> 3
 ```
+
+## decompile
+
+```lua
+function decompile(script: ModuleScript | LocalScript): (string)
+```
+
+Decompiles the current script.
+Output varies on decompiler.
+
+### Aliases
+
+ * `getscriptsource`
+ * `rbxdecompile`
+ * `luadecompile`
+
+### Example
+
+```lua
+local source = decompile(game:GetService("Players").LocalPlayer.Character.Animate)
+print(source) --> source representation of script Animate
+```
